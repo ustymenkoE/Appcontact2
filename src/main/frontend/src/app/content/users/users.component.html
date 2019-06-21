@@ -1,0 +1,40 @@
+
+<div class="container">
+  <h1 class="text-center">User Contact</h1>
+
+</div>
+<div class="container text-center">
+  <table class="table table-hover table-striped" id="users">
+    <thead>
+    <tr>
+      <th>Contact detail</th>
+      <th>ID</th>
+      <th>FullName</th>
+      <th>Phone</th>
+    </tr>
+    </thead>
+
+    <tbody ngForm = "let user of users">
+    <tr>
+      <td>
+        <input type="checkbox" id="one" onchange="fun1()">User details
+        <script>
+          function fun1() {
+            var chbox;
+            chbox=document.getElementById('one');
+            if (chbox.checked) {
+              alert('Выбран');
+            }
+            else {
+              alert ('Не выбран');
+            }
+          }
+        </script>
+      </td>
+      <td>{{users["id"]}}</td>
+      <td>{{users["fullName"]}}</td>
+      <td>{{users["phone"]}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
